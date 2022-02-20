@@ -1,17 +1,17 @@
 import { useContext } from "react";
-import AuthContext from "../../../context/AuthContext";
-import { Link, useHistory } from "react-router-dom";
-import { IoLogOutOutLine } from "react-icons/io5";
+import AuthContext from "../../context/AuthContext";
+import { Link, useNavigate } from "react-router-dom";
+import { IoLogOutOutline } from "react-icons/io5";
 import { AiOutlineUser } from "react-icons/ai";
 
 export default function Header({ handleClick }) {
 	const [auth, setAuth] = useContext(AuthContext);
 
-	const history = useHistory();
+	const navigate = useNavigate();
 
 	const logout = () => {
 		setAuth(null);
-		history.push("/");
+		navigate("/");
 	};
 
 	return (
@@ -23,13 +23,13 @@ export default function Header({ handleClick }) {
 
 				<nav>
 					<ul className="header__links">
-						<Link>
+						<Link to="/">
 							<li className="header__item">Home</li>
 						</Link>
-						<Link>
+						<Link to="/places">
 							<li className="header__item">Places</li>
 						</Link>
-						<Link>
+						<Link to="/contact">
 							<li className="header__item">Contact</li>
 						</Link>
 						{auth ? (
@@ -39,7 +39,7 @@ export default function Header({ handleClick }) {
 								</Link>
 								<li>
 									<button className="circular-btn-main" onClick={logout}>
-										<IoLogOutOutLine />
+										<IoLogOutOutline />
 									</button>
 								</li>
 							</>
