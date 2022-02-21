@@ -1,8 +1,9 @@
 import React from "react";
 import CategoryItem from "./CategoryItem";
-import Hotels from "../../assets/hotels.webp";
-import GuestHouses from "../../assets/guesthouses.webp";
-import BnB from "../../assets/bnb.webp";
+import Hotels from "./../../../assets/hotels.webp";
+import GuestHouses from "./../../../assets/guesthouses.webp";
+import BnB from "../../../assets/bnb.webp";
+import "./Categories.scss";
 const Categories = () => {
 	return (
 		<div className="categories">

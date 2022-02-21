@@ -1,8 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Hero from "../components/HomePage/Hero";
-import FeaturedPlaces from "../components/HomePage/FeaturedPlaces";
-import Categories from "../components/HomePage/Categories";
+import Hero from "../../components/HomePage/Hero";
+import FeaturedPlaces from "../../components/HomePage/FeaturedPlaces";
+import Categories from "../../components/HomePage/Categories";
+import "./Home.scss";
 
 const HomePage = () => {
 	return (
@@ -25,5 +26,4 @@ const HomePage = () => {
 		</motion.div>
 	);
 };
-
 export default HomePage;

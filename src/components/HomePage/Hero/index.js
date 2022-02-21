@@ -1,6 +1,7 @@
 import React from "react";
+import "./Hero.scss";
 
-import HeroImg from "../../assets/3.webp";
+import HeroImg from "../../../assets/3.webp";
 import { motion } from "framer-motion";
 import { HiOutlineChevronDown } from "react-icons/hi";
 

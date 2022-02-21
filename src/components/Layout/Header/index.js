@@ -1,8 +1,9 @@
 import { useContext } from "react";
-import AuthContext from "../../context/AuthContext";
+import AuthContext from "./../../../context/AuthContext";
 import { Link, useNavigate } from "react-router-dom";
 import { IoLogOutOutline } from "react-icons/io5";
 import { AiOutlineUser } from "react-icons/ai";
+import "./Header.scss";
 
 export default function Header({ handleClick }) {
 	const [auth, setAuth] = useContext(AuthContext);

@@ -1,10 +1,11 @@
 import { useQuery } from "@apollo/client";
 import React from "react";
 import { Link } from "react-router-dom";
-import { FEATURED } from "../../requests/requests";
-import Loader from "../Layout/Loader";
+import { FEATURED } from "./../../../requests/requests";
+import Loader from "../../Layout/Loader/index";
 import { motion } from "framer-motion";
 import { GiRoundStar } from "react-icons/gi";
+import "./Featured.scss";
 
 const FeaturedPlaces = () => {
 	const { loading, error, data } = useQuery(FEATURED);

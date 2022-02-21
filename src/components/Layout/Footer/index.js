@@ -4,6 +4,7 @@ import {
 	FaInstagramSquare,
 	FaTwitterSquare,
 } from "react-icons/fa";
+import "./Footer.scss";
 const Footer = () => {
 	return (
 		<footer>
