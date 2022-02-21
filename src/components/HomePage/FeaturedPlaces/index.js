@@ -24,13 +24,7 @@ const FeaturedPlaces = () => {
 						<div className="hotel-grid">
 							{data?.category.places.map((place) => (
 								<Link to={`/details/${place.id}`} key={place.id}>
-									<motion.div
-										key={place.id}
-										className="hotel-card"
-										whileHover={{ scale: 0.95 }}
-										whileTap={{ scale: 0.9 }}
-										transition={{ type: "string", stiffness: 300 }}
-									>
+									<div key={place.id} className="hotel-card">
 										<div className="hotel-card__image-wrapper">
 											<img
 												src={place.Image[0].url}
@@ -38,21 +32,26 @@ const FeaturedPlaces = () => {
 											/>
 											<div className="rating">
 												<span className="rating__icon">
-													<GiRoundStar /> {place.rating}
+													<GiRoundStar />
 												</span>
+												{place.Rating}
 											</div>
 										</div>
 										<div className="hotel-card__content">
-											<h2>{place.title}</h2>
-											<div className="price">
-												<span>From</span>
-												<span className="price-number">{place.price} NOK</span>
-											</div>
-											<div className="hotel-card__bottom">
-												<div className="featured-badge">Popular</div>
+											<h2>{place.Title}</h2>
+											<div className="info">
+												<div className="price">
+													<span>From: </span>
+													<span className="price-number">
+														${place.Price / 4}
+													</span>
+												</div>
+												<div className="hotel-card__bottom">
+													<div className="featured-badge">Popular</div>
+												</div>
 											</div>
 										</div>
-									</motion.div>
+									</div>
 								</Link>
 							))}
 						</div>

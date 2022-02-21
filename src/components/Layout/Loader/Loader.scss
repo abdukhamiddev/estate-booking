@@ -1,0 +1,16 @@
+@import "../../../sass/utils/variables";
+@import "../../../sass/utils/breakpoints";
+@import "../../../sass/utils/mixins";
+
+.loader {
+	color: $color-black;
+	z-index: 9999;
+	display: grid;
+	place-items: center;
+
+	&__svg {
+		width: 10rem;
+		height: 10rem;
+		display: inline-block;
+	}
+}

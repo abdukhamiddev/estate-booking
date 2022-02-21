@@ -26,7 +26,6 @@ const Hero = () => {
 			</div>
 			<div className="hero__img-container">
 				<img src={HeroImg} alt="Woman walking" />
-				<img src="" alt="" className="overlay" />
 			</div>
 		</div>
 	);

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
+import "./CategoryItem.scss";
 
 const CategoryItem = ({ imageUrl, description }) => {
 	return (
@@ -9,9 +10,9 @@ const CategoryItem = ({ imageUrl, description }) => {
 				<div className="category__img-container">
 					<img className="category_image" src={imageUrl} alt={description} />
 				</div>
-				<h5 className="category-title">
-					{description}{" "}
-					<span>
+				<h5 className="category__title">
+					{description}
+					<span className="arrow-icon">
 						<HiOutlineArrowNarrowRight />
 					</span>
 				</h5>

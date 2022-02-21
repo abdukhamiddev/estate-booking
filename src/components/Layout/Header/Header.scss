@@ -1,0 +1,61 @@
+@import "../../../sass/utils/variables";
+@import "../../../sass/utils/breakpoints";
+@import "../../../sass/utils/mixins";
+.header {
+	background-color: $color-white;
+	height: 10vh;
+	width: 100%;
+	position: fixed;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 4rem 5%;
+	top: 0;
+	z-index: 999;
+
+	&__logo {
+		display: block;
+		width: 4rem;
+		max-width: 30rem;
+	}
+	nav {
+		order: 3;
+	}
+	&__links {
+		display: none;
+		color: $color-black;
+		list-style: none;
+		align-items: center;
+		z-index: 999;
+		height: 100%;
+		&--open {
+			@include flex-center;
+			position: fixed;
+			overflow-y: hidden;
+			font-size: 4rem;
+			top: 0;
+			left: 0;
+			height: 100vh;
+			width: 100%;
+			background: $color-white;
+			list-style: none;
+		}
+		@include media-breakpoint-up(md) {
+			display: flex;
+		}
+	}
+	&__item {
+		padding: 1rem;
+		font-size: 15px;
+		color: $color-black;
+	}
+	&__hamburger {
+		font-size: 4rem;
+		cursor: pointer;
+		z-index: 999;
+		order: 4;
+		@include media-breakpoint-up(md) {
+			display: none;
+		}
+	}
+}

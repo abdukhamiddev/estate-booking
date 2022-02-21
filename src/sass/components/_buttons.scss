@@ -1,0 +1,17 @@
+.circular-btn-main {
+	margin-left: 20px;
+	display: grid;
+	place-items: center;
+	cursor: pointer;
+	border: none;
+	border-radius: 50%;
+	width: 4rem;
+	height: 4rem;
+	font-size: 2rem;
+	transition: all 500ms ease;
+	color: $color-white;
+	background: $color-radical-red;
+	&:hover {
+		background: darken($color-radical-red, 5%);
+	}
+}
