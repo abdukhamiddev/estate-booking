@@ -3,7 +3,7 @@
 @import "../../../sass/utils/mixins";
 .hero {
 	@include flex-center;
-	height: 80vh;
+	height: 95vh;
 	width: 90%;
 	margin: 0 auto;
 	margin-top: 6vh;
@@ -32,7 +32,7 @@
 		align-items: center;
 		z-index: 1;
 		color: $color-white;
-		top: 55%;
+		top: 65%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 		position: absolute;
@@ -49,6 +49,5 @@
 	}
 	&__title-sub {
 		font-size: 2rem;
-		margin-bottom: 2rem;
 	}
 }

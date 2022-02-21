@@ -3,7 +3,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FEATURED } from "./../../../requests/requests";
 import Loader from "../../Layout/Loader/index";
-import { motion } from "framer-motion";
 import { GiRoundStar } from "react-icons/gi";
 import "./Featured.scss";
 
@@ -20,7 +19,7 @@ const FeaturedPlaces = () => {
 			) : (
 				<>
 					<div className="featured-section">
-						<h2 className="heading-medium">Popular Places</h2>
+						<h2 className="heading-m">Popular Places</h2>
 						<div className="hotel-grid">
 							{data?.category.places.map((place) => (
 								<Link to={`/details/${place.id}`} key={place.id}>

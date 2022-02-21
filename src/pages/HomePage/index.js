@@ -18,7 +18,7 @@ const HomePage = () => {
 			<Hero />
 			<FeaturedPlaces />
 			<div className="category-container">
-				<h2 className="heading-medium">Sleep the way you want</h2>
+				<h2 className="heading-m">Sleep the way you want</h2>
 				<p className="paragraph u-centered">
 					Choose between hotels bed &amp; breakfast and guesthouses
 				</p>

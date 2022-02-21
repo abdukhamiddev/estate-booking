@@ -1,0 +1,19 @@
+@import "../../../sass/utils/variables";
+@import "../../../sass/utils/breakpoints";
+@import "../../../sass/utils/mixins";
+
+footer {
+	@include flex-center;
+	flex: 0;
+	color: $color-white;
+	background: $color-black;
+	ul {
+		display: flex;
+		justify-content: space-evenly;
+		width: 20rem;
+		list-style: none;
+		font-size: 3rem;
+		padding: 2rem;
+		width: 100%;
+	}
+}
