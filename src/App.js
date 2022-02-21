@@ -7,6 +7,7 @@ import Header from "./components/Layout/Header";
 import { AnimatePresence } from "framer-motion";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage";
+import Footer from "./components/Layout/Footer";
 
 const client = new ApolloClient({
 	uri: process.env.REACT_APP_GRAPHQL_URL,
@@ -25,10 +26,13 @@ function App() {
 				<ApolloProvider client={client}>
 					<Header handleClick={displayModal} />
 					<main>
-						<Routes>
-							<Route path="/" element={<HomePage />} />
-						</Routes>
+						<AnimatePresence>
+							<Routes>
+								<Route path="/" element={<HomePage />} />
+							</Routes>
+						</AnimatePresence>
 					</main>
+					<Footer />
 				</ApolloProvider>
 			</Router>
 		</AuthProvider>

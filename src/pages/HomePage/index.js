@@ -4,6 +4,7 @@ import Hero from "../../components/HomePage/Hero";
 import FeaturedPlaces from "../../components/HomePage/FeaturedPlaces";
 import Categories from "../../components/HomePage/Categories";
 import "./Home.scss";
+import Explore from "../../components/HomePage/Explore";
 
 const HomePage = () => {
 	return (
@@ -23,6 +24,7 @@ const HomePage = () => {
 				</p>
 				<Categories />
 			</div>
+			<Explore />
 		</motion.div>
 	);
 };

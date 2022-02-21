@@ -1,6 +1,6 @@
 import React from "react";
 import {
-	FacebookSquare,
+	FaFacebookSquare,
 	FaInstagramSquare,
 	FaTwitterSquare,
 } from "react-icons/fa";
@@ -10,7 +10,7 @@ const Footer = () => {
 		<footer>
 			<ul>
 				<li>
-					<FacebookSquare />
+					<FaFacebookSquare />
 				</li>
 				<li>
 					<FaTwitterSquare />
@@ -19,7 +19,7 @@ const Footer = () => {
 					<FaInstagramSquare />
 				</li>
 			</ul>
-			<p>2022 &cop. All rights reserved</p>
+			<p>2022 &copy; All rights reserved</p>
 		</footer>
 	);
 };
