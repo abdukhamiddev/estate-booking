@@ -12,10 +12,10 @@ import Hotels from "./pages/hotelspage";
 import Page404 from "./pages/404";
 
 import Hotel from "./pages/hotelpage";
-import Booking from "./pages/booking";
+import Booking from "./pages/bookingpage";
 import LoginModal from "./components/Login/LoginModal";
-import Dashboard from "./pages/dashboard";
-import Contact from "./pages/contact";
+import Dashboard from "./pages/dashboardpage";
+import Contact from "./pages/contactpage";
 
 const client = new ApolloClient({
 	uri: process.env.REACT_APP_GRAPHQL_URL,
