@@ -64,12 +64,15 @@ export default function ContactForm() {
 					placeholder="Your Message"
 					{...register("Content")}
 				/>
-				<Button
-					text={submitting ? "Sending..." : "Send"}
-					className="btn-main"
-					disabled={submitting}
-					type="submit"
-				/>
+				<div className="submit-button">
+					<Button
+						text={submitting ? "Sending..." : "Send"}
+						className="btn-main"
+						disabled={submitting}
+						type="submit"
+					/>
+				</div>
+
 				{submitMessage ? (
 					<p className="form-success">
 						<ImCheckboxChecked /> We have received your booking request!!

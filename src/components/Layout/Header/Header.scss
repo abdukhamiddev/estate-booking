@@ -57,6 +57,9 @@
 		padding: 1rem;
 		font-size: 15px;
 		color: $color-black;
+		@media screen and (min-width: 1500px) {
+			font-size: 3rem;
+		}
 	}
 	&__hamburger {
 		font-size: 4rem;

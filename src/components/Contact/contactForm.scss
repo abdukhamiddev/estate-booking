@@ -6,3 +6,17 @@
 		display: block;
 	}
 }
+.submit-button {
+	margin-left: 40%;
+	@include media-breakpoint-down(mob) {
+		margin-left: 30%;
+	}
+	@media screen and (min-height: 1000px) {
+		margin-left: 20%;
+	}
+}
+fieldset {
+	@include media-breakpoint-down(mob) {
+		margin-top: 7rem;
+	}
+}

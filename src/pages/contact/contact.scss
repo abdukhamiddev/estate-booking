@@ -3,7 +3,7 @@
 @import "../../sass/utils/variables";
 .contact-us {
 	min-height: 100vh;
-	margin-top: 10rem;
+	margin-top: 15rem;
 	@include media-breakpoint-up(md) {
 		display: flex;
 		padding: 5%;
@@ -19,6 +19,9 @@
 		p {
 			margin-bottom: 1rem;
 		}
+		@media screen and (min-width: 2000px) {
+			max-width: 80rem;
+		}
 	}
 	@include media-breakpoint-down(md) {
 	}
@@ -27,12 +30,18 @@ input {
 	width: 100%;
 	@include media-breakpoint-down(md) {
 		width: 80%;
-		margin-left: 5rem;
+		margin-left: 2rem;
+	}
+	@media screen and (min-width: 2000px) {
+		font-size: 2rem;
 	}
 }
 label {
 	@include media-breakpoint-down(md) {
 		margin-left: 5rem;
+	}
+	@media screen and (min-width: 2000px) {
+		font-size: 3rem;
 	}
 }
 
@@ -43,7 +52,10 @@ textarea {
 	margin-top: 1rem;
 	@include media-breakpoint-down(md) {
 		width: 80%;
-		margin-left: 5rem;
+		margin-left: 2rem;
+	}
+	@media screen and (min-width: 2000px) {
+		font-size: 2rem;
 	}
 }
 h2,
@@ -51,10 +63,19 @@ h1 {
 	@include media-breakpoint-down(md) {
 		font-size: 2rem;
 	}
+	@media screen and (min-width: 2000px) {
+		font-size: 6rem;
+	}
 }
 
 p {
 	@include media-breakpoint-down(md) {
 		font-size: 1.5rem;
 	}
+	@media screen and (min-width: 2000px) {
+		font-size: 4rem;
+	}
+}
+.submit-button {
+	margin-top: 4rem;
 }
