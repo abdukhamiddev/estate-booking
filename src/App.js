@@ -6,7 +6,7 @@ import "./App.css";
 import Header from "./components/Layout/Header";
 import { AnimatePresence } from "framer-motion";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import HomePage from "./pages/homePage";
+import HomePage from "./pages/home";
 import Footer from "./components/Layout/Footer";
 import Hotels from "./pages/hotels";
 import Page404 from "./pages/404";

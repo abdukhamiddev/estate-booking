@@ -17,7 +17,7 @@ const schema = yup.object().shape({
 
 export default function ContactForm() {
 	const [submitting, setSubmitting] = useState(false);
-	const [submitError, setSubmitnError] = useState(null);
+
 	const [submitMessage, setSubmitMessage] = useState(false);
 
 	const { register, handleSubmit, reset } = useForm({
@@ -34,11 +34,11 @@ export default function ContactForm() {
 			})
 		);
 		setSubmitting(true);
-		setSubmitnError(null);
+		
 		try {
 			console.log("submitting");
 		} catch (error) {
-			setSubmitnError(error.toString);
+			console.log(error);
 		} finally {
 			setSubmitting(false);
 			reset({});

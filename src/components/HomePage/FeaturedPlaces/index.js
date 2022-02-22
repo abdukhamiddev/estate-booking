@@ -1,6 +1,6 @@
 import { useQuery } from "@apollo/client";
 import React from "react";
-import { Link } from "react-router-dom";
+
 import { FEATURED } from "./../../../requests/requests";
 import Loader from "../../Layout/Loader/index";
 

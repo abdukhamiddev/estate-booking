@@ -7,7 +7,7 @@ import Loader from "../../components/Layout/Loader";
 import { TiArrowBackOutline } from "react-icons/ti";
 import { AiFillClockCircle, AiOutlineWifi } from "react-icons/ai";
 import { MdFreeBreakfast } from "react-icons/md";
-import { GiRoundStar } from "react-icons/gi";
+
 import { GET_HOTEL_BY_ID } from "../../requests/requests";
 
 import "./hotel.scss";
