@@ -10,12 +10,10 @@ import "./category.scss";
 
 export default function Category() {
 	const [filterParam, setFilterParam] = useState(1);
-	const id = filterParam;
+
 	const { loading, error, data } = useQuery(GET_BY_CATEGORY, {
-		variables: { id: id },
+		variables: { id: filterParam },
 	});
-	if (loading) return <Loader />;
-	if (error) return <div>Error..</div>;
 
 	const options = [
 		{ value: 1, label: "All" },
@@ -24,8 +22,8 @@ export default function Category() {
 		{ value: 4, label: "GuestHouses" },
 	];
 
-	const handleFilter = (options) => {
-		setFilterParam(options.value);
+	const handleFilter = async (options) => {
+		await setFilterParam(options.value);
 	};
 
 	return (

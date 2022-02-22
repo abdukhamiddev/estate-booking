@@ -12,6 +12,10 @@
 		height: 40rem;
 		object-fit: cover;
 		border-radius: 1.5rem;
+
+		@include media-breakpoint-up(lg) {
+			margin-left: 2rem;
+		}
 	}
 	&__description {
 		margin-bottom: 2rem;
@@ -53,6 +57,9 @@
 		margin-bottom: 2rem;
 		@include media-breakpoint-up(lg) {
 			margin-right: 3rem;
+		}
+		@include media-breakpoint-down(md) {
+			width: 80%;
 		}
 	}
 	@include media-breakpoint-up(lg) {

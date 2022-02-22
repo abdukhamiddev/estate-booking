@@ -1,0 +1,36 @@
+@import "../../../sass/utils/breakpoints";
+@import "../../../sass/utils/variables";
+@import "../../../sass/utils/mixins";
+fieldset {
+	border: none;
+}
+
+input {
+	border: none;
+	background: $color-gray-light;
+	padding: 1.5rem 2rem;
+	margin: 2rem 0;
+	width: 130%;
+	border-radius: 1.5rem;
+	@include media-breakpoint-down(md) {
+		margin: 1rem;
+	}
+}
+
+button {
+	margin-top: 2rem;
+	width: 100%;
+	@include media-breakpoint-down(md) {
+		margin-bottom: 3rem;
+		margin-top: 1rem;
+		margin-left: 4rem;
+	}
+}
+form {
+	@include media-breakpoint-down(md) {
+		h2 {
+			padding-top: 10px;
+			padding-left: 5rem;
+		}
+	}
+}

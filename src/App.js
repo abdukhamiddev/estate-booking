@@ -13,6 +13,8 @@ import Page404 from "./pages/404";
 
 import Hotel from "./pages/Hotel";
 import Booking from "./pages/Booking";
+import LoginModal from "./components/Login/LoginModal";
+import Dashboard from "./pages/Dashboard";
 
 const client = new ApolloClient({
 	uri: process.env.REACT_APP_GRAPHQL_URL,
@@ -31,6 +33,9 @@ function App() {
 				<ApolloProvider client={client}>
 					<div className="app">
 						<Header handleClick={displayModal} />
+						{showModal ? (
+							<LoginModal shown={showModal} close={() => setShowModal(false)} />
+						) : null}
 						<main>
 							<AnimatePresence>
 								<Routes>
@@ -39,6 +44,7 @@ function App() {
 									<Route path="/hotel/:id" element={<Hotel />} />
 									<Route path="*" element={<Page404 />} />
 									<Route path="/booking/:id" element={<Booking />} />
+									<Route path="/dashboard" element={<Dashboard />} />
 								</Routes>
 							</AnimatePresence>
 						</main>
