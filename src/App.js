@@ -11,7 +11,7 @@ import Footer from "./components/Layout/Footer";
 import Hotels from "./pages/hotelspage";
 import Page404 from "./pages/404";
 
-import Hotel from "./pages/hotel";
+import Hotel from "./pages/hotelpage";
 import Booking from "./pages/booking";
 import LoginModal from "./components/Login/LoginModal";
 import Dashboard from "./pages/dashboard";
