@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Hero from "../../components/HomePage/Hero";
 import FeaturedPlaces from "../../components/HomePage/FeaturedPlaces";
 import Categories from "../../components/HomePage/Categories";
-import "./Home.scss";
+import "./home.scss";
 import Explore from "../../components/HomePage/Explore";
 
 const HomePage = () => {

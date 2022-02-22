@@ -6,15 +6,16 @@ import "./App.css";
 import Header from "./components/Layout/Header";
 import { AnimatePresence } from "framer-motion";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import HomePage from "./pages/HomePage";
+import HomePage from "./pages/homePage";
 import Footer from "./components/Layout/Footer";
-import Hotels from "./pages/Hotels";
+import Hotels from "./pages/hotels";
 import Page404 from "./pages/404";
 
-import Hotel from "./pages/Hotel";
-import Booking from "./pages/Booking";
+import Hotel from "./pages/hotel";
+import Booking from "./pages/booking";
 import LoginModal from "./components/Login/LoginModal";
-import Dashboard from "./pages/Dashboard";
+import Dashboard from "./pages/dashboard";
+import Contact from "./pages/contact";
 
 const client = new ApolloClient({
 	uri: process.env.REACT_APP_GRAPHQL_URL,
@@ -45,6 +46,7 @@ function App() {
 									<Route path="*" element={<Page404 />} />
 									<Route path="/booking/:id" element={<Booking />} />
 									<Route path="/dashboard" element={<Dashboard />} />
+									<Route path="/contact" element={<Contact />} />
 								</Routes>
 							</AnimatePresence>
 						</main>

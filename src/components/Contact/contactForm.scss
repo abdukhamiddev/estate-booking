@@ -1,0 +1,8 @@
+@import "../../sass/utils/mixins";
+@import "../../sass/utils/variables";
+@import "../../sass/utils/breakpoints";
+.form__label {
+	@include media-breakpoint-down(md) {
+		display: block;
+	}
+}

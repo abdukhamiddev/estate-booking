@@ -11,7 +11,7 @@ import { ImCheckboxChecked } from "react-icons/im";
 import { motion } from "framer-motion";
 import Button from "../../components/common/Button";
 import Loader from "../../components/Layout/Loader";
-import "./Booking.scss";
+import "./booking.scss";
 
 const schema = yup.object().shape({
 	first_name: yup.string().required("Please enter your first name."),

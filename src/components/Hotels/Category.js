@@ -3,10 +3,11 @@ import { useState } from "react";
 import { GET_BY_CATEGORY } from "../../requests/requests";
 import Loader from "../Layout/Loader";
 import Select from "react-select";
-import { RiArrowDropDownFill } from "react-icons/ri";
+
 import Place from "../Place";
-import Hotels from "../../pages/Hotels";
+
 import "./category.scss";
+import HotelsCollection from "./Hotels";
 
 export default function Category() {
 	const [filterParam, setFilterParam] = useState(1);
@@ -49,7 +50,7 @@ export default function Category() {
 					))}
 				</div>
 			) : (
-				<Hotels />
+				<HotelsCollection />
 			)}
 		</div>
 	);

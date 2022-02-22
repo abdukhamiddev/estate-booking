@@ -10,7 +10,7 @@ import { MdFreeBreakfast } from "react-icons/md";
 import { GiRoundStar } from "react-icons/gi";
 import { GET_HOTEL_BY_ID } from "../../requests/requests";
 
-import "./Hotel.scss";
+import "./hotel.scss";
 const Hotel = () => {
 	const { id } = useParams();
 	const { loading, error, data } = useQuery(GET_HOTEL_BY_ID, {
