@@ -3,6 +3,11 @@
 @import "../../../sass/utils/mixins";
 .header {
 	background-color: $color-white;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+	filter: alpha(opacity=80);
+	-moz-opacity: 0.4;
+	-khtml-opacity: 0.4;
+	opacity: 0.8;
 	height: 10vh;
 	width: 100%;
 	position: fixed;
@@ -59,4 +64,8 @@
 			display: none;
 		}
 	}
+}
+li {
+	font-family: "DM Sans";
+	font-weight: 400;
 }

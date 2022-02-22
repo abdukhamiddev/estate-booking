@@ -12,6 +12,7 @@ import Hotels from "./pages/Hotels";
 import Page404 from "./pages/404";
 
 import Hotel from "./pages/Hotel";
+import Booking from "./pages/Booking";
 
 const client = new ApolloClient({
 	uri: process.env.REACT_APP_GRAPHQL_URL,
@@ -37,6 +38,7 @@ function App() {
 									<Route path="/hotels" element={<Hotels />} />
 									<Route path="/hotel/:id" element={<Hotel />} />
 									<Route path="*" element={<Page404 />} />
+									<Route path="/booking/:id" element={<Booking />} />
 								</Routes>
 							</AnimatePresence>
 						</main>

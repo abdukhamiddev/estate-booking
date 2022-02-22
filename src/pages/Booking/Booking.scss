@@ -1,0 +1,119 @@
+@import "../../sass/utils/mixins";
+@import "../../sass/utils/breakpoints";
+@import "../../sass/utils/variables";
+.form {
+	display: flex;
+	flex-direction: column;
+	margin: 2rem auto;
+	width: 90%;
+
+	@include media-breakpoint-up(md) {
+		width: 50%;
+
+		button {
+			width: 30rem;
+		}
+	}
+
+	fieldset {
+		border: none;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__label {
+		font-weight: 600;
+		margin-bottom: 0.5rem;
+	}
+
+	input {
+		border: none;
+		border-radius: 5px;
+		padding: 0.5rem 1rem;
+		margin-bottom: 2rem;
+		height: 3rem;
+	}
+
+	textarea {
+		border: none;
+		border-radius: 5px;
+		padding: 0.5rem 1rem;
+		height: 10rem;
+		margin-bottom: 2rem;
+		resize: none;
+		height: 10rem;
+	}
+}
+
+.booking {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	&__card {
+		background: $color-white;
+		border-radius: 1rem;
+		overflow-x: auto;
+		margin-bottom: 2rem;
+	}
+	&__header {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		img {
+			object-fit: cover;
+			height: 40rem;
+			width: 70%;
+			border-radius: 1.5rem;
+		}
+	}
+
+	&__table {
+		box-shadow: 0px 8px 40px rgba(37, 37, 37, 0.06);
+		border-radius: 1rem;
+		width: 100%;
+		border-collapse: collapse;
+		margin: 25px 0;
+
+		thead tr {
+			background-color: $color-mountain-meadow;
+			color: $color-white;
+		}
+
+		th {
+			padding: 1.2rem 1.5rem;
+			width: 20%;
+		}
+	}
+
+	&__status {
+		color: $color-success-green;
+	}
+}
+
+.form-error {
+	color: $color-error;
+	background: $color-error-light;
+	text-align: center;
+	border-radius: 5px;
+	padding: 0.2rem;
+	margin-bottom: 2rem;
+	transform: translateY(-2rem);
+}
+
+.form-success {
+	color: $color-success;
+	background: $color-success-light;
+	border-radius: 5px;
+	padding: 1rem;
+	margin: 2rem 0;
+	display: flex;
+	align-items: center;
+
+	svg {
+		margin-right: 2rem;
+	}
+}
+.book {
+	margin-top: 9rem;
+}
