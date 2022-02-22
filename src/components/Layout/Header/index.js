@@ -39,8 +39,8 @@ export default function Header({ handleClick }) {
 						<Link to="/" onClick={() => setOpen(false)}>
 							<li className="header__item">Home</li>
 						</Link>
-						<Link to="/places">
-							<li className="header__item">Places</li>
+						<Link to="/hotels">
+							<li className="header__item">Hotels</li>
 						</Link>
 						<Link to="/contact">
 							<li className="header__item">Contact</li>

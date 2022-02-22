@@ -4,16 +4,18 @@
 
 footer {
 	@include flex-center;
-	flex: 0;
-	color: $color-white;
+	position: relative;
 	background: $color-black;
+	color: $color-white;
+	width: 100%;
+	bottom: 0;
+	padding: 2rem;
+
 	ul {
 		display: flex;
 		justify-content: space-evenly;
 		width: 20rem;
 		list-style: none;
 		font-size: 3rem;
-		padding: 2rem;
-		width: 100%;
 	}
 }

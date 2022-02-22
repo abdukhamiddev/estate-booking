@@ -6,7 +6,7 @@ import "./CategoryItem.scss";
 const CategoryItem = ({ imageUrl, description }) => {
 	return (
 		<div className="category">
-			<Link to="/places">
+			<Link to="/hotels">
 				<div className="category__img-container">
 					<img className="category_image" src={imageUrl} alt={description} />
 				</div>

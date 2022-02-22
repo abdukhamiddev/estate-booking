@@ -9,7 +9,7 @@ const Explore = () => {
 			<h2 className="heading-m">
 				Explore our hotels definitely you will find your dream stay
 			</h2>
-			<Link to="/places">
+			<Link to="/hotels">
 				<Button text="Explore" />
 			</Link>
 		</div>

@@ -1,0 +1,25 @@
+@import "../../sass/utils/mixins";
+@import "../../sass/utils/variables";
+.hotels-page {
+	@include flex-center;
+	margin-top: 15rem;
+	height: 100%;
+}
+
+.hotels-filter {
+	position: relative;
+	margin-bottom: 3rem;
+	width: 20rem;
+	select {
+		padding: 1rem;
+
+		background: $color-black;
+		color: $color-white;
+		border: 0;
+		padding: 1rem 6rem 1rem 1.5rem;
+		height: 4.5rem;
+	}
+	&__arrow {
+		display: grid;
+	}
+}

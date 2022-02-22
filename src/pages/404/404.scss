@@ -1,0 +1,13 @@
+@import "../../sass/utils/mixins";
+
+.page-404 {
+	@include flex-center;
+	height: 100vh;
+	h1 {
+		font-size: 8rem;
+	}
+	img {
+		width: 30%;
+		object-fit: cover;
+	}
+}

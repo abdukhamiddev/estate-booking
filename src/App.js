@@ -8,6 +8,8 @@ import { AnimatePresence } from "framer-motion";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import Footer from "./components/Layout/Footer";
+import Hotels from "./pages/Hotels";
+import Page404 from "./pages/404";
 
 const client = new ApolloClient({
 	uri: process.env.REACT_APP_GRAPHQL_URL,
@@ -24,15 +26,19 @@ function App() {
 		<AuthProvider>
 			<Router>
 				<ApolloProvider client={client}>
-					<Header handleClick={displayModal} />
-					<main>
-						<AnimatePresence>
-							<Routes>
-								<Route path="/" element={<HomePage />} />
-							</Routes>
-						</AnimatePresence>
-					</main>
-					<Footer />
+					<div className="app">
+						<Header handleClick={displayModal} />
+						<main>
+							<AnimatePresence>
+								<Routes>
+									<Route path="/" element={<HomePage />} exact />
+									<Route path="/hotels" element={<Hotels />} />
+									<Route path="*" element={<Page404 />} />
+								</Routes>
+							</AnimatePresence>
+						</main>
+						<Footer />
+					</div>
 				</ApolloProvider>
 			</Router>
 		</AuthProvider>
