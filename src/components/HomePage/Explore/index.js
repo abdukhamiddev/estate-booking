@@ -6,7 +6,7 @@ import "./Explore.scss";
 const Explore = () => {
 	return (
 		<div className="explore">
-			<h2 className="heading-m">
+			<h2 className="heading-m exp">
 				Explore our hotels definitely you will find your dream stay
 			</h2>
 			<Link to="/hotels">

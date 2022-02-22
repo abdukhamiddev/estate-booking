@@ -5,7 +5,12 @@ import Category from "../../components/Hotels/Category";
 import "./Hotels.scss";
 const Hotels = () => {
 	return (
-		<motion.div>
+		<motion.div
+			className="container"
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			exit={{ opacity: 0 }}
+		>
 			<Category />
 		</motion.div>
 	);

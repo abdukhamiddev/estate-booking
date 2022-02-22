@@ -1,14 +1,13 @@
 @import "../../../sass/utils/variables";
-@import "../../../sass/utils/breakpoints";
+
 @import "../../../sass/utils/mixins";
 
 footer {
 	@include flex-center;
-	position: relative;
 	background: $color-black;
 	color: $color-white;
 	width: 100%;
-	bottom: 0;
+	height: 10rem;
 	padding: 2rem;
 
 	ul {
