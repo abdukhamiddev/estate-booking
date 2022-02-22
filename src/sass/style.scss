@@ -18,6 +18,10 @@ main {
 }
 .hotel-grid {
 	margin: 3rem auto;
+
+	@include media-breakpoint-down(mob) {
+		margin-right: 1rem;
+	}
 	display: grid;
 	gap: 4rem;
 	grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));

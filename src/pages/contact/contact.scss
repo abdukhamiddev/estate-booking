@@ -35,12 +35,6 @@ label {
 		margin-left: 5rem;
 	}
 }
-button {
-	width: 100%;
-	@include media-breakpoint-down(md) {
-		margin-left: 10rem;
-	}
-}
 
 textarea {
 	padding: 2rem;

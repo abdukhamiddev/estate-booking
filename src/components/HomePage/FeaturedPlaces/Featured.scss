@@ -8,6 +8,9 @@
 	a {
 		color: $color-black;
 	}
+	@include media-breakpoint-down(mob) {
+		margin-right: 2rem;
+	}
 }
 
 .hotel-grid {
@@ -29,7 +32,12 @@
 .hotel-card {
 	display: flex;
 	flex-direction: column;
-
+	@include media-breakpoint-down(mob) {
+		margin-right: 6rem;
+	}
+	@include media-breakpoint-down(md) {
+		margin: 0;
+	}
 	overflow: hidden;
 	line-height: 3.5rem;
 	&__image-wrapper {
@@ -93,6 +101,9 @@
 .info {
 	display: flex;
 	justify-content: space-between;
+	@include media-breakpoint-down(mob) {
+		flex-direction: column;
+	}
 }
 
 .price {

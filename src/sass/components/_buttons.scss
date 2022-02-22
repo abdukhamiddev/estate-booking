@@ -31,4 +31,7 @@
 	&:hover {
 		background: darken($color-radical-red, 10%);
 	}
+	@include media-breakpoint-down(mob) {
+		padding-right: 2rem;
+	}
 }

@@ -17,15 +17,6 @@ input {
 	}
 }
 
-button {
-	margin-top: 2rem;
-	width: 100%;
-	@include media-breakpoint-down(md) {
-		margin-bottom: 3rem;
-		margin-top: 0;
-		margin-left: 4rem;
-	}
-}
 form {
 	@include media-breakpoint-down(md) {
 	}
