@@ -46,3 +46,20 @@ export const GET_PLACES = gql`
 		}
 	}
 `;
+
+export const GET_HOTEL_BY_ID = gql`
+	query getHotel($id: ID!) {
+		place(id: $id) {
+			Title
+			Description
+			Image {
+				url
+				alternativeText
+			}
+			Rating
+			Price
+			Address
+			id
+		}
+	}
+`;

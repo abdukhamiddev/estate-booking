@@ -4,7 +4,7 @@ import { GiRoundStar } from "react-icons/gi";
 
 const Place = ({ place }) => {
 	return (
-		<Link to={`/details/${place.id}`} key={place.id}>
+		<Link to={`/hotel/${place.id}`} key={place.id}>
 			<div key={place.id} className="hotel-card">
 				<div className="hotel-card__image-wrapper">
 					<img src={place.Image[0].url} alt={place.Image[0].alternativeText} />

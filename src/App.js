@@ -10,7 +10,8 @@ import HomePage from "./pages/HomePage";
 import Footer from "./components/Layout/Footer";
 import Hotels from "./pages/Hotels";
 import Page404 from "./pages/404";
-import Booking from "./pages/Booking";
+
+import Hotel from "./pages/Hotel";
 
 const client = new ApolloClient({
 	uri: process.env.REACT_APP_GRAPHQL_URL,
@@ -34,8 +35,8 @@ function App() {
 								<Routes>
 									<Route path="/" element={<HomePage />} />
 									<Route path="/hotels" element={<Hotels />} />
+									<Route path="/hotel/:id" element={<Hotel />} />
 									<Route path="*" element={<Page404 />} />
-									<Route path="/booking" element={<Booking />} />
 								</Routes>
 							</AnimatePresence>
 						</main>
