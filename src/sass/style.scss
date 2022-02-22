@@ -12,8 +12,9 @@
 
 body {
 	margin: 0;
-	height: 100%;
-	position: relative;
+}
+main {
+	min-height: 100vh;
 }
 .hotel-grid {
 	margin: 3rem auto;
@@ -34,4 +35,5 @@ body {
 .container {
 	min-height: 100vh;
 	margin-top: 15rem;
+	position: relative;
 }

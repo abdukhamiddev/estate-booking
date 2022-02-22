@@ -48,12 +48,9 @@ export default function Booking() {
 	const [submitError, setSubmitError] = useState(null);
 	const [submitMessage, setSubmitMessage] = useState(false);
 
-	const {
-		register,
-		handleSubmit,
-		reset,
-		formState: { errors },
-	} = useForm({ resolver: yupResolver(schema) });
+	const { register, handleSubmit, reset } = useForm({
+		resolver: yupResolver(schema),
+	});
 
 	const { id } = useParams();
 	const { loading, error, data } = useQuery(HOTEL, {
@@ -96,91 +93,99 @@ export default function Booking() {
 	};
 
 	return (
-		<div className="container book">
-			<motion.div
-				className="booking"
-				initial={{ opacity: 0 }}
-				animate={{ opacity: 1 }}
-				exit={{ opacity: 0 }}
-			>
-				<header className="booking__header">
-					<img
-						src={data.place.Image[0].url}
-						alt={data.place.Image[0].alternativeText}
-						className=""
-					/>
-
-					<h1>{`Book ${data.place.Title} now!`} </h1>
-				</header>
-
-				<form onSubmit={handleSubmit(submitBooking)} className="form">
-					<fieldset disabled={submitting}>
-						<label for="first_name" className="form__label">
-							First name
-						</label>
-						<input
-							{...register("first_name")}
-							type="text"
-							placeholder="Your first name"
+		<motion.div
+			className="booking"
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			exit={{ opacity: 0 }}
+		>
+			{loading ? (
+				<Loader />
+			) : error ? (
+				<div>Error...{error}</div>
+			) : (
+				<>
+					<header className="booking__header">
+						<img
+							src={data.place.Image[0].url}
+							alt={data.place.Image[0].alternativeText}
+							className=""
 						/>
 
-						<label for="last_name" className="form__label">
-							Last name
-						</label>
-						<input
-							{...register("last_name")}
-							type="text"
-							placeholder="Your last name"
-						/>
+						<h1>{`Book ${data.place.Title} now!`} </h1>
+					</header>
 
-						<label for="email" className="form__label">
-							Email
-						</label>
-						<input
-							{...register("email")}
-							type="text"
-							placeholder="Your email"
-						/>
+					<form onSubmit={handleSubmit(submitBooking)} className="form">
+						<fieldset disabled={submitting}>
+							<label for="first_name" className="form__label">
+								First name
+							</label>
+							<input
+								{...register("first_name")}
+								type="text"
+								placeholder="Your first name"
+							/>
 
-						<label for="phone" className="form__label">
-							Phone
-						</label>
-						<input
-							{...register("phone")}
-							type="text"
-							placeholder="Your phone number"
-						/>
+							<label for="last_name" className="form__label">
+								Last name
+							</label>
+							<input
+								{...register("last_name")}
+								type="text"
+								placeholder="Your last name"
+							/>
 
-						<label for="date_from" className="form__label">
-							Check-in
-						</label>
-						<input {...register("date_from")} type="date" />
+							<label for="email" className="form__label">
+								Email
+							</label>
+							<input
+								{...register("email")}
+								type="text"
+								placeholder="Your email"
+							/>
 
-						<label for="date_to" className="form__label">
-							Check-out
-						</label>
-						<input {...register("date_to")} type="date" />
+							<label for="phone" className="form__label">
+								Phone
+							</label>
+							<input
+								{...register("phone")}
+								type="text"
+								placeholder="Your phone number"
+							/>
 
-						<label for="message" className="form__label">
-							Message
-						</label>
-						<textarea {...register("message")} placeholder="Your message" />
+							<label for="date_from" className="form__label">
+								Check-in
+							</label>
+							<input {...register("date_from")} type="date" />
 
-						<Button
-							disabled={submitting}
-							type="submit"
-							className="btn-main"
-							text={submitting ? "Sending..." : "Book now"}
-						/>
-						{submitMessage ? (
-							<p className="form-success">
-								<ImCheckboxChecked /> Thank you for contacting us!
-							</p>
-						) : null}
-					</fieldset>
-					{submitError && <span className="form-error">{submitError}</span>}
-				</form>
-			</motion.div>
-		</div>
+							<label for="date_to" className="form__label">
+								Check-out
+							</label>
+							<input {...register("date_to")} type="date" />
+
+							<label for="message" className="form__label">
+								Message
+							</label>
+							<textarea {...register("message")} placeholder="Your message" />
+							<div className="form-button">
+								<Button
+									disabled={submitting}
+									type="submit"
+									className="btn-main"
+									text={submitting ? "Sending..." : "Book now"}
+								/>
+							</div>
+
+							{submitMessage ? (
+								<p className="form-success">
+									<ImCheckboxChecked /> Thank you for contacting us!
+								</p>
+							) : null}
+						</fieldset>
+						{submitError && <span className="form-error">{submitError}</span>}
+					</form>
+				</>
+			)}
+		</motion.div>
 	);
 }
