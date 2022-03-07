@@ -58,7 +58,7 @@ export default function Header({ handleClick }) {
 							</>
 						) : (
 							<>
-								<li>
+								<li className="login-md">
 									<button className="circular-btn-main" onClick={handleClick}>
 										<AiOutlineUser />
 									</button>
