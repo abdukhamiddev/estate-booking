@@ -34,7 +34,7 @@ export default function ContactForm() {
 			})
 		);
 		setSubmitting(true);
-		
+
 		try {
 			console.log("submitting");
 		} catch (error) {
@@ -51,11 +51,21 @@ export default function ContactForm() {
 				<label className="form__label" htmlFor="Name">
 					Full Name
 				</label>
-				<input type="text" placeholder="Your Name" {...register("Name")} />
+				<input
+					type="text"
+					placeholder="Your Name"
+					{...register("Name")}
+					className="contact-input"
+				/>
 				<label className="form__label" htmlFor="Email">
 					Email
 				</label>
-				<input type="email" placeholder="Your Email" {...register("Email")} />
+				<input
+					type="email"
+					placeholder="Your Email"
+					{...register("Email")}
+					className="contact-input"
+				/>
 				<label className="form__label" htmlFor="Content">
 					Message
 				</label>
@@ -63,15 +73,15 @@ export default function ContactForm() {
 					type="text"
 					placeholder="Your Message"
 					{...register("Content")}
+					className="contact-input"
 				/>
-				<div className="submit-button">
-					<Button
-						text={submitting ? "Sending..." : "Send"}
-						className="btn-main"
-						disabled={submitting}
-						type="submit"
-					/>
-				</div>
+
+				<Button
+					text={submitting ? "Sending..." : "Send"}
+					className="btn-main"
+					disabled={submitting}
+					type="submit"
+				/>
 
 				{submitMessage ? (
 					<p className="form-success">

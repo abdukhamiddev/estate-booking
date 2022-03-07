@@ -33,7 +33,7 @@
 		background: darken($color-radical-red, 10%);
 	}
 	@include media-breakpoint-down(md) {
-		margin-right: 2rem;
+		margin: 0 2rem;
 	}
 	@media screen and (min-width: 1500px) {
 		font-size: 4rem;
