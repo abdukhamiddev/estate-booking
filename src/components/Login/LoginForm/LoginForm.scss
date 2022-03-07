@@ -3,21 +3,21 @@
 @import "../../../sass/utils/mixins";
 fieldset {
 	border: none;
-}
-
-input {
-	border: none;
-	background: $color-gray-light;
-	padding: 1.5rem 2rem;
-	margin: 2rem 0;
-	width: 130%;
-	border-radius: 1.5rem;
-	@include media-breakpoint-down(md) {
-		margin: 1rem;
+	display: flex;
+	flex-direction: column;
+	margin-top: -2rem;
+	input {
+		border: none;
+		background: $color-gray-light;
+		padding: 1.5rem 2rem;
+		margin: 5px 2rem;
+		width: auto;
+		border-radius: 1.5rem;
+		@include media-breakpoint-down(md) {
+		}
 	}
 }
 
-form {
-	@include media-breakpoint-down(md) {
-	}
+.error {
+	color: red;
 }

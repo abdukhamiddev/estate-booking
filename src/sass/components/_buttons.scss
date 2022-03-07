@@ -25,14 +25,15 @@
 	border: none;
 	cursor: pointer;
 	transition: all 500ms ease;
+	text-align: center;
 	font-size: 1.8rem;
 	font-weight: bold;
 	height: 5rem;
 	&:hover {
 		background: darken($color-radical-red, 10%);
 	}
-	@include media-breakpoint-down(mob) {
-		padding-right: 2rem;
+	@include media-breakpoint-down(md) {
+		margin-right: 2rem;
 	}
 	@media screen and (min-width: 1500px) {
 		font-size: 4rem;

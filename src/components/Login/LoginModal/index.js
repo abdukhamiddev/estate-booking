@@ -23,11 +23,13 @@ const LoginModal = ({ shown, close }) => {
 					<img src={Login} alt="Login Illustration" className="img-hover" />
 				</div>
 				<div className="modal__right">
-					<button className="modal-close" onClick={close}>
-						<AiOutlineClose />
-					</button>
-					<div className="login">
-						<LoginForm />
+					<div className="modal__right-content">
+						<button className="modal-close" onClick={close}>
+							<AiOutlineClose />
+						</button>
+						<div className="login">
+							<LoginForm />
+						</div>
 					</div>
 				</div>
 			</div>

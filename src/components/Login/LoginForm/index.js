@@ -57,21 +57,28 @@ const LoginForm = () => {
 		<div>
 			<LoginModal />
 			<form onSubmit={handleSubmit(onSubmit)} className="modal__right">
-				{loginError && <p>{loginError}</p>}
+				{loginError && <p className="error">{loginError}</p>}
+
 				<h2 className="heading-m">Login</h2>
+
 				<fieldset disabled={submitting}>
 					<input
 						type="text"
 						placeholder="Type your email"
 						{...register("email")}
 					/>
-					{errors.email && <span>{errors.email.message}</span>}
+					{errors.email && (
+						<span className="error">{errors.email.message}</span>
+					)}
 					<input
 						type="password"
 						placeholder="Type your password"
 						{...register("password")}
 					/>
-					{errors.password && <span>{errors.password.message}</span>}
+					{errors.password && (
+						<span className="error">{errors.password.message}</span>
+					)}
+
 					<Button
 						type="submit"
 						className="btn-main"
